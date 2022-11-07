@@ -1,0 +1,27 @@
+@import "style/global";
+
+.block {
+  background-image: url(../../assets/images/bg-boost-mobile.svg); //   display: flex;
+  background-color: $c-primary-dark;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 30px;
+    color: $c-white;
+  }
+
+  .button {
+    @include button($button-radius-b, $button-padding-b);
+  }
+}

@@ -1,0 +1,33 @@
+@import "style/global";
+
+.card {
+  background-color: $c-white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+
+  p {
+    font-size: $big-font-size;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .short_link {
+    color: $c-primary-medium;
+  }
+
+  .long_link {
+    color: $c-gray-dark-violet;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $c-gray-background;
+  }
+  .button {
+    @include button($button-radius-s, $button-padding-s);
+  }
+}

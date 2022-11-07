@@ -1,0 +1,11 @@
+@import "style/global";
+
+.icons {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  @include hoverLinks;
+}

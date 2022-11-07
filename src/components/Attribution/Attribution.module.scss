@@ -1,0 +1,12 @@
+@import "/src/style/global";
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: $c-gray;
+  background-color: $c-gray-dark-violet;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

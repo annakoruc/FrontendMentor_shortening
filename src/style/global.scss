@@ -1,0 +1,23 @@
+@import "./fonts";
+@import "./variables";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $c-gray-background;
+  font-family: "Poppins", sans-serif;
+  color: $c-gray-dark-violet;
+  box-sizing: border-box;
+  font-size: $default-font-size;
+  overflow-x: hidden;
+
+  p {
+    color: $c-gray;
+  }
+}

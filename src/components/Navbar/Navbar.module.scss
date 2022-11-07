@@ -1,0 +1,19 @@
+@import "/src/style/global";
+
+.navblock {
+  display: block;
+  justify-content: center;
+
+  .navbar {
+    background-color: $c-white;
+    color: $c-gray-violet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    .hamburger {
+      z-index: 10;
+    }
+  }
+}
