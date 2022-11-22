@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./Footer.module.scss";
 import { FooterIcons } from "components/FooterIcons";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -10,26 +11,46 @@ export const Footer = () => {
       <section>
         <h3>Features</h3>
         <div>
-          <p>Link Shortening</p>
-          <p>Branded Links</p>
-          <p>Analytics</p>
+          <Link to={"/link-shortening"} className={styles.link}>
+            Link Shortening
+          </Link>
+          <Link to={"/branded-links"} className={styles.link}>
+            Branded Links
+          </Link>
+          <Link to={"/analitycs"} className={styles.link}>
+            Analytics
+          </Link>
         </div>
       </section>
       <section>
         <h3>Resources</h3>
         <div>
-          <p>Blog</p>
-          <p>Developers</p>
-          <p>Support</p>
+          <Link to={"/blog"} className={styles.link}>
+            Blog
+          </Link>
+          <Link to={"/developers"} className={styles.link}>
+            Developers
+          </Link>
+          <Link to={"/support"} className={styles.link}>
+            Support
+          </Link>
         </div>
       </section>
       <section>
         <h3>Company</h3>
         <div>
-          <p>About</p>
-          <p>Our Team</p>
-          <p>Careers</p>
-          <p>Contact</p>
+          <Link to={"/about"} className={styles.link}>
+            About
+          </Link>
+          <Link to={"/our-team"} className={styles.link}>
+            Our Team
+          </Link>
+          <Link to={"/carrers"} className={styles.link}>
+            Careers
+          </Link>
+          <Link to={"/contact"} className={styles.link}>
+            Contact
+          </Link>
         </div>
       </section>
       <FooterIcons />

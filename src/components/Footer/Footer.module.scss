@@ -31,7 +31,12 @@
     }
   }
 
-  p {
+  .link {
     @include hoverLinks;
+    text-decoration: none;
+
+    &:focus {
+      color: $c-primary-medium;
+    }
   }
 }
