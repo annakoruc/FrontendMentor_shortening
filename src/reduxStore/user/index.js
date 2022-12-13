@@ -1,4 +1,4 @@
-import { auth, db } from "config/fbConfig";
+import { auth } from "config/fbConfig";
 
 const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
