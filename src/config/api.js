@@ -1,5 +1,6 @@
 import { store } from "reduxStore";
 import { addLink } from "reduxStore/links";
+import { getUserName, isUserLogged } from "./auth";
 
 export const BASE_API_URL = `https://api.shrtco.de/v2/shorten?url=`;
 
@@ -15,6 +16,7 @@ export const shorten = async (url) => {
           addLink({
             short: data.result.short_link,
             long: data.result.original_link,
+            user: isUserLogged() ? getUserName() : "none",
           })
         );
       });

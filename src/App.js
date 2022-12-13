@@ -1,29 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-import {
-  SearchBar,
-  Footer,
-  Navbar,
-  Statistics,
-  AllUserLinks,
-  HomeCard,
-} from "components";
-import { Attribution } from "components/Attribution";
-import { GetStarted } from "components/GetStarted";
+import { paths } from "config/paths";
+import { Route, Routes } from "react-router-dom";
+import { HomePage, SignUp } from "pages";
+import { LoginPage } from "pages/LoginPage";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <HomeCard />
-      <SearchBar />
-      <AllUserLinks />
-      <Statistics />
-      <GetStarted />
-      <Footer />
-      <Attribution />
-    </div>
+    <Routes className="App">
+      <Route path={paths.home} element={<HomePage />} />
+      <Route path={paths.signUp} element={<SignUp />} />
+      <Route path={paths.login} element={<LoginPage />} />
+    </Routes>
   );
 }
 

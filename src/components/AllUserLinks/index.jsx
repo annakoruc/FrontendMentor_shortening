@@ -1,29 +1,29 @@
-import { LinkCard } from "components";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { store } from "reduxStore";
 
 import styles from "./AllUserLinks.module.scss";
+import { getDataFromFirebase } from "reduxStore/links";
+import { LinkCard } from "components";
 
 export const AllUserLinks = () => {
-  function addSampleTodo() {
-    const sampleTodo = { text: "Sample", done: false };
-    // return firebase.push("todos", sampleTodo);
-  }
+  const [userLinks, setUserLinks] = useState([]);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getDataFromFirebase()).then(() =>
+      setUserLinks(store.getState().links.data)
+    );
+  }, [dispatch]);
 
   return (
-    <div className={styles.links}>
-      <button onClick={addSampleTodo}>Add</button>
-      <LinkCard
-        longLink={"Długi linnnnnnnnnnnnnnnnnnnnnnnnnnnnk"}
-        shortLink={"Krótki link"}
-      />
-      <LinkCard
-        longLink={"Długi linnnnnnnnnnnnnnnnnnnnnnnnnnnnk"}
-        shortLink={"Też chcialbym być skopiowany"}
-      />
-      <LinkCard
-        longLink={"Długi linnnnnnnnnnnnnnnnnnnnnnnnnnnnk"}
-        shortLink={"Coś nowego "}
-      />
+    <div>
+      <h1>Links</h1>
+      <div className={styles.links}>
+        {userLinks.map((e) => (
+          <LinkCard longLink={e.long} shortLink={e.short} />
+        ))}
+      </div>
     </div>
   );
 };
