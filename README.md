@@ -26,3 +26,8 @@ Currently, the look of the application is adapted to the mobile version.
 ### In future: 
 1. Adapt Page to desctop version
 2. Add login and sign up with email and password
+
+## Author
+
+- Github - [Anna Koruc](https://github.com/annakoruc)
+- Frontend Mentor - [@annakoruc](https://www.frontendmentor.io/profile/annakoruc)
