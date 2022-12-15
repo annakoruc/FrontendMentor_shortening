@@ -6,6 +6,7 @@ import { userLogin } from "reduxStore/user";
 
 import styles from "./HamburgerMenu.module.scss";
 import { isUserLogged } from "config/auth";
+import { paths } from "config/paths";
 
 export const HamburgerMenu = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ export const HamburgerMenu = () => {
       .then(
         () => window.localStorage.setItem("userId", JSON.stringify(null)),
         dispatch(userLogin()),
-        navigate("/")
+        navigate(0)
       )
       .catch((err) => console.log(err));
   }
@@ -39,11 +40,11 @@ export const HamburgerMenu = () => {
         <div className={styles.border} />
         {!isUserLogged() ? (
           <>
-            <Link className={styles.link} to={`/login`}>
+            <Link className={styles.link} to={paths.login}>
               Login
             </Link>
 
-            <Link className={styles.link} to={`/signup`}>
+            <Link className={styles.link} to={paths.signUp}>
               Sign Up
             </Link>
           </>

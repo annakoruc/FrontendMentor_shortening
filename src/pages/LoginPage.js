@@ -1,10 +1,13 @@
-import Login from "config/signIn";
+import { Attribution, Navbar } from "components";
+import LoginWithGoogle from "config/LoginWithGoogle";
 import React from "react";
 
 export const LoginPage = () => {
   return (
     <div>
-      <Login />
+      <Navbar />
+      <LoginWithGoogle />
+      <Attribution />
     </div>
   );
 };

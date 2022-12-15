@@ -1,0 +1,25 @@
+@import "style/global";
+
+.block {
+  background-image: url(../assets/images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $c-primary-dark;
+  border-radius: 12px;
+
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 2rem;
+
+  .button {
+    @include button($button-radius-s, $button-padding-b);
+  }
+
+  h1 {
+    font-size: 30px;
+    color: $c-white;
+    text-align: center;
+  }
+}

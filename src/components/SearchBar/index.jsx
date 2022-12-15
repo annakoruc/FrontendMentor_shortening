@@ -24,7 +24,6 @@ export const SearchBar = () => {
       <button onClick={handleClick} className={styles.button}>
         Shorten It!
       </button>
-      <button onClick={() => console.log(store.getState())}>Spradź</button>
     </div>
   );
 };

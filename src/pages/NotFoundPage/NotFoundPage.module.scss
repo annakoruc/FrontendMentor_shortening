@@ -1,0 +1,38 @@
+@import "style/global";
+
+.card {
+  background-color: $c-white;
+  height: 100%;
+  margin-bottom: -6rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 2rem;
+
+  .button {
+    @include button($button-radius-b, $button-padding-b);
+    width: 200px;
+  }
+
+  .img {
+    transform: scale(0.75);
+    margin-right: -12rem;
+    margin-top: -4rem;
+  }
+
+  h1 {
+    font-size: 80px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  p {
+    width: 90%;
+    text-align: center;
+  }
+}

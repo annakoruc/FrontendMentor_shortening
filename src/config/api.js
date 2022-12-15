@@ -1,5 +1,5 @@
 import { store } from "reduxStore";
-import { addLink } from "reduxStore/links";
+import { addLink } from "reduxStore/user";
 import { getUserName, isUserLogged } from "./auth";
 
 export const BASE_API_URL = `https://api.shrtco.de/v2/shorten?url=`;

@@ -1,3 +1,6 @@
 export * from "./AboutUsPage";
 export * from "./HomePage";
-export * from "./SignUp";
+export * from "./LoginPage";
+
+export * from "./NotFoundPage";
+export * from "./PageInProgress";
