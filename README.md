@@ -4,6 +4,8 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 ## About Page:
 
+[Open Page](https://shortly-frontendmentor-ak.netlify.app/)
+
 The Aplication is connected with [API](https://shrtco.de/docs) which helps shorten to long link. Users get shortened link to copy without log in. 
 
 Users can login with Google, and see their old links in aplication - long link and shorten which can copy using the button. 
@@ -22,6 +24,7 @@ Currently, the look of the application is adapted to the mobile version.
 
 - Visual Studio Code
 - Firebase
+- Netlify
 
 ### In future: 
 1. Adapt Page to desctop version
